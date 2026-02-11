@@ -197,3 +197,56 @@ This project demonstrates:
 
 Bruno A. Camarosano Soto  
 BSc (Hons) Cybersecurity – The Open University
+
+---
+
+## Local Installation Guide
+
+### Requirements
+
+- XAMPP (Apache + MariaDB)
+- PHP 8.x
+- Modern browser (Chrome / Edge)
+
+### Steps
+
+1. Clone the repository:
+
+git clone https://github.com/Camarosano/Final-Year-Project-Phishing-Defence-Platform.git
+
+2. Move the project folder into:
+
+C:\xampp\htdocs\
+
+3. Start Apache and MySQL in XAMPP.
+
+4. Open phpMyAdmin:
+
+http://localhost/phpmyadmin
+
+
+5. Create a database named:
+
+phishing_defence
+
+
+6. Import the database schema 
+
+7. Open the application in your browser:
+
+http://localhost/Final-Year-Project-Phishing-Defence-Platform/
+
+
+---
+
+## Development Mode
+
+If using environment variables:
+
+Create a `.env` file in the project root:
+
+APP_ENV=dev
+DB_HOST=127.0.0.1
+DB_NAME=phishing_defence
+DB_USER=root
+DB_PASS=
