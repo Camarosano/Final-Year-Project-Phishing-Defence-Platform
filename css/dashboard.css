@@ -1,0 +1,217 @@
+/* Base style for entire page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;/* Black background for hacker-style effect */
+  color: #f0f0f0; /* Light text for contrast */
+  font-family: 'Share Tech Mono', monospace;/* Hacker-style font */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top navigation bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  border-bottom: 2px solid #ff2e2e;
+  padding: 1rem 2rem;
+}
+
+/* Logo styling in the top bar */
+.logo-small {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff2e2e;
+  text-shadow: 0 0 10px #ff2e2e;
+  text-transform: uppercase;
+}
+
+/* Back button or menu toggle */
+.menu-toggle {
+  font-size: 2rem;
+  color: #ff2e2e;
+  cursor: pointer;
+}
+
+/* Slide bar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  box-shadow: 2px 0 5px rgba(255, 46, 46, 0.2);
+  padding-top: 5rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Active class slides the sidebar into view */
+.sidebar.active {
+  left: 0;
+}
+
+/* Reset list styling in sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar list items */
+.sidebar li {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #ff2e2e;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+/* Hover effect for sidebar links */
+.sidebar a:hover {
+  color: #fff;
+}
+
+/* Main content area of the dashboard */
+.dashboard-content {
+  padding: 2rem;
+  margin-left: 0;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Push main content when sidebar is active */
+.sidebar.active ~ .dashboard-content {
+  margin-left: 250px;
+}
+
+/* General heading styling */
+h1 {
+  font-size: 2.5rem;
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+/* Chart container block */
+.chart-container {
+  margin-top: 3rem;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff2e2e;
+  min-height: 300px;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Section containing module cards */
+.modules-section {
+    margin-top: 3rem;
+  }
+  
+
+  .modules-section h2 {
+    font-size: 2rem;
+    color: #ff2e2e;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px #ff2e2e;
+  }
+  
+  /* Layout for multiple module cards */
+  .modules-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  /* Individual module card style */
+  .module-card {
+    background-color: #111;
+    border: 2px solid #ff2e2e;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 280px;
+    box-shadow: 0 0 10px rgba(255, 46, 46, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Zoom effect on hover */
+  .module-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Module card title */
+  .module-card h3 {
+    font-size: 1.5rem;
+    color: #00ff99;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #00ff99;
+  }
+  
+  /* Module card description */
+  .module-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Module card button */
+  .module-card a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #ff2e2e;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Button hover effect */
+  .module-card a:hover {
+    background-color: #e60000;
+    color: white;
+  }
+
+  /* Tarjeta bloqueada */
+.locked {
+  opacity: .45;
+  pointer-events: none;   /* desactiva clics */
+}
+
+.lock-msg {
+  display:block;
+  margin-top:.6rem;
+  font-size:.9rem;
+  color:#b91c1c;
+}
+
+/* ===== attempt history charts ===== */
+.chart-wrapper{
+  display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.5rem;
+  border:2px solid #ff0000;border-radius:6px;padding:1.5rem;
+  background:#111;                    /* same dark bg as rest */
+  width:100%;
+}
+.chart-box{
+  flex:1 1 260px;                     /* three boxes wrap nicely */
+  min-width:240px;
+  background:#000;                    /* inner panel */
+  border:1px solid #ff0000;           /* neon frame */
+  border-radius:6px;padding:1rem;
+  text-align:center;color:#00ffa2;    /* your green titles */
+}
+.chart-box h3{font-family:'Share Tech Mono', monospace;font-size:1.1rem;margin:0 0 .6rem}
+canvas{max-width:100%}

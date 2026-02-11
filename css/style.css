@@ -1,0 +1,159 @@
+/* Hacker-style base layout for full-height dark theme */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f0f0f0;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header style with red glowing cyber aesthetic */
+  header {
+    background-color: #000;
+    padding: 1rem 0 0.5rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ff2e2e;
+  }
+  
+  /* LOGO: big and red*/
+  .logo {
+    font-size: 15rem;
+    font-weight: bold;
+    color: #ff2e2e;
+    text-shadow: 0 0 10px #ff2e2e;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+     0 0 15px #ff2e2e;
+  }
+  
+  /* HERO content: central block of the landing page */
+  main.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.2rem;
+    text-align: center;
+  }
+  /* Main title styling */
+  .hero h1 {
+    max-width: 1400px;
+    font-size: 9rem;
+    color: #ff2e2e;
+    text-shadow: 0 0 5px #ff0000;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+     0 0 15px #ff2e2e;
+  }
+  /* Paragraph describing the mission */
+  .description {
+    max-width: 1400px;
+    font-size: 2.5rem;
+    color: #f0f0f0;
+    margin: 0;
+    line-height: 1.5;
+  }
+  /* Warning-style heading (Are you ready?) */
+  .alert {
+    font-size: 7rem;
+    color: #ff2e2e;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+     0 0 15px #ff2e2e;
+  }
+  /* Smaller description below alert */
+  .start-text {
+    font-size: 2.5rem;
+    color: #ccc;
+    max-width: 1400px;
+    margin: 0;
+  }
+  /* Button section container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* General button styles */
+  .cta-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px;
+  }
+  
+  /* Red pill (training) */
+  .cta-button.red {
+    background-color: #ff2e2e;
+    color: black;
+    box-shadow: 0 0 10px #ff2e2e;
+    text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+     0 0 15px #ff2e2e;
+  }
+  /* Red pill button hover effect Increases brightness, enlarges font to 3rem, */ 
+  .cta-button.red:hover {
+    background-color: #e60000;
+    color: white;
+    box-shadow: 0 0 20px #e60000;
+    font-size: 3rem;
+  }
+  
+  /* Blue pill (info) */
+  .cta-button.blue {
+    background-color: #2196f3;
+    color: white;
+    box-shadow: 0 0 10px #2196f3;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black,
+     0 0 15px #ff2e2e;
+  }
+  /* Blue pill button hover effect  subtle glow and standard sizing for informational tone */
+  .cta-button.blue:hover {
+    background-color: #1976d2;
+    box-shadow: 0 0 20px #1976d2;
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: #ff2e2e;
+    border-top: 2px solid #ff2e2e;
+  }

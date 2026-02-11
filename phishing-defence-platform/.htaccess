@@ -1,0 +1,17 @@
+# --- Disable directory listing
+Options -Indexes
+
+# --- Block direct access to /config (valid inside .htaccess)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Deny any request that targets the config directory
+  RewriteRule ^config/ - [F,L]
+</IfModule>
+
+# --- Minimal security headers (fallback; PHP already sends these)
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
