@@ -1,29 +1,27 @@
-# OS files
+# OS / Editor
 .DS_Store
 Thumbs.db
-
-# IDE files
 .vscode/
-.idea/
-
-# Environment variables
-.env
-.env.local
-.env.*
 
 # Logs
 *.log
 
-# Temporary files
-tmp/
-temp/
+# Dependencies (if you ever add Composer)
+vendor/
 
-# Upload folders (if applicable)
-uploads/
+# Environment / secrets
+.env
+.env.*
+config/config.php
 
-# XAMPP specific
-xampp/
-php_error_log
-
-# Database dumps with real data
+# Local / XAMPP / database dumps
 *.sql
+*.sqlite
+*.db
+
+# Node (if you ever add it)
+node_modules/
+
+# Build artifacts
+dist/
+build/
